@@ -51,9 +51,6 @@ body {
   margin-top: -40px;
 }
 
-#opac {
-  opacity: 80%;
-}
 
 .text {
   width: 350px;
@@ -111,7 +108,6 @@ body {
   padding-left: 20px;
   color: #ffffff;
   font-size: 12px;
-  opacity: 80%;
 
 }
 
