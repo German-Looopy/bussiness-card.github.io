@@ -1,105 +1,88 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-body {
+body { 
   background: #C8E6C9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: Poppins;
+  }
 
 
-}
 
 .card {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row-reverse;
-  width: 750px;
-  height: 400px;
+  width: 45rem;
+  height: 25rem;
   border-radius: 15px;
   background: linear-gradient(to right, #2E7D32 0, #2E7D32 35%, #ffffff 35%, #ffffff 75%);
   padding: 20px;
   overflow: hidden;
+  margin: 40px auto;
 }
-
 .right {
   width: 650px;
   height: 400px;
-  position: relative;
-  border-radius: 0 15px 0 0;
-  display: flex;
   padding: 30px;
-
-}
-
+ }
 .name {
-  position: absolute;
+  position:;
   margin: 10px;
   margin-left: 180px;
   padding: 10px 30px;
   width: 40px;
   height: 30px;
 }
-
 #color {
-  position: absolute;
+  position: ;
   color: #2E7D32;
   margin-top: -40px;
 }
-
-
 .text {
   width: 350px;
   height: 200px;
   margin-left: 200px;
   position: absolute;
   font-size: 12px;
-  padding: 0px;
   margin-top: 90px;
-}
-
+  }
 .text h2 {
   position: absolute;
   font-size: 16px;
   font-weight: bold;
   opacity: 80%;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: -10px;
+  margin-top: -20px;
 }
-
 .text p {
   padding: 10px;
-  margin: 30px 0px;
+  margin-top: -10px;
   width: 250px;
   height: 50px;
 }
-
 .tech {
   width: 300px;
   height: 100px;
   position: absolute;
   font-size: 12px;
-  margin-top: 270px;
-  margin-left: 180px;
+  margin-top: 260px;
+  margin-left: 200px;
 }
-
 .tech h2 {
   position: absolute;
   font-size: 16px;
   font-weight: bold;
   opacity: 80%;
-  margin-left: 20px;
-  margin-top: -20px;
+  margin-left: -10px;
+  margin-top: -40px;
 }
-
-
-
-
-
+.tech ul {
+  position: absolute;
+  margin-top: -10px;
+}
 .left {
   position: relative;
   width: 250px;
@@ -108,74 +91,66 @@ body {
   padding-left: 20px;
   color: #ffffff;
   font-size: 12px;
-
+  
 }
-
 .small-circle {
   position: absolute;
   width: 40px;
   height: 40px;
   background: #2E7D32;
   border-radius: 50%;
-  margin-left: 135px;
-  margin-top: 320px;
+  margin-left: 145px;
+  margin-top: 270px;
 }
-
 .big-circle {
   position: absolute;
   width: 100px;
   height: 100px;
   background: #2E7D32;
   border-radius: 50%;
-  margin-left: 470px;
-  margin-top: -90px;
-
+  margin-left: 450px;
+  margin-top: -130px;
+  
 }
-
 .zac {
-  position: absolute;
-  width: 40%;
-  height: 80%;
-  margin-left: -62px;
-  margin-top: -25px;
+  position: relative;
+  width: 14rem;
+  height: 23rem;
+  margin-left: -54px;
+  margin-top: -72px;
 }
-
 .up {
   margin-top: -50px;
   margin-left: 10px;
 }
-
 .down {
   margin-top: 50px;
 }
-
 .quadrat3 {
   position: absolute;
   width: 15px;
   height: 15px;
   background: #ffffff;
-  margin-left: 140px;
+  margin-left: 155px;
+  margin-top: 10px;
   z-index: 1;
 }
-
 .quadrat2 {
   position: absolute;
   width: 30px;
   height: 30px;
   background: #ffffff;
   margin-left: 180px;
-  margin-top: 177px;
+  margin-top: 260px;
 }
-
 .quadrat1 {
   position: absolute;
   width: 30px;
   height: 30px;
   background: #ffffff;
   margin-left: 140px;
-  margin-top: -120px;
+  margin-top: -60px;
 }
-
 .bar {
   position: absolute;
   width: 194px;
@@ -184,25 +159,58 @@ body {
   margin-left: -40px;
   margin-top: 100px;
 }
-
 .email {
   position: absolute;
   margin-top: -35px;
   margin-left: -25px;
 }
-
 .phone {
   position: absolute;
   margin-top: -35px;
   margin-left: -25px;
 }
-
 .logos {
   display: flex;
   justify-content: flex-start;
-
+  
 }
-
 .link {
   padding: 0 10px;
 }
+
+                /*now let us made a flip card*/
+.flip {
+  transition: all 0.3s ease 0s;
+  perspective: 5000px; 
+}
+.in {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+.flip:hover .in {
+  transform: rotateY(180deg);
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.back {
+  background-image: url("https://images.pexels.com/photos/3831849/pexels-photo-3831849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45rem; 
+  height: 30rem;
+  border-radius: 15px;
+  transform: rotateY(180deg);
+}
+.back h1 {
+  color: #ffffff;
+  text-shadow: 10px 0 0 gray;
+}
+
