@@ -184,11 +184,11 @@ body {
   perspective: 5000px; 
 }
 .in {
-  transition: transform 2s;
+  transition: transform 7s;
   transform-style: preserve-3d;
 }
 .flip:hover .in {
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 .front, .back {
   position: absolute;
